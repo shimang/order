@@ -1,0 +1,42 @@
+﻿@model QCloud.WeApp.Demo.MVC.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NickName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NickName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsValid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsValid)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<QCloud.WeApp.Demo.MVC.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NickName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsValid)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NickName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsValid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
